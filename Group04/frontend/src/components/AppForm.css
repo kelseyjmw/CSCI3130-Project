@@ -1,0 +1,64 @@
+/* Put this id on the div containing the form */
+#app-form {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 40px 32px;
+  border: 1px solid #4a4a4a;
+  border-radius: 12px;
+  background: #2a2a2a;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+#app-form h1 {
+  line-height: 1.2;
+}
+
+#app-form form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #aaa;
+}
+
+#app-form form input {
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #1f1f1f;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 15px;
+  transition: border-color 0.15s ease;
+}
+
+#app-form form input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+#app-form form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+#app-form form button:hover {
+  background-color: #1d4ed8;
+}
+
+#app-form form button:active {
+  transform: scale(0.98);
+}
+
+#app-form .radio-section {
+  display: inline-flex;
+}

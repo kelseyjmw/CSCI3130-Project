@@ -1,0 +1,95 @@
+#audit-log {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  text-align: left;
+}
+#audit-log h1 {
+  font-size: 1.75rem;
+  margin: 0 0 6px;
+  text-align: left;
+}
+
+.al-muted {
+  opacity: 0.65;
+  font-size: 0.9rem;
+}
+
+.al-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 12px;
+}
+.al-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+.al-table th,
+.al-table td {
+  padding: 9px 12px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+.al-table th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.65;
+  background: rgba(128, 128, 128, 0.08);
+}
+.al-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.al-nowrap {
+  white-space: nowrap;
+}
+.al-reason {
+  min-width: 240px;
+  overflow-wrap: anywhere;
+}
+
+.al-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 2px 9px;
+  border-radius: 999px;
+  border: 1px solid;
+}
+.al-badge.success {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: rgba(34, 197, 94, 0.55);
+}
+.al-badge.failed {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.55);
+}
+
+.al-banner {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+.al-banner.error {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+}
+
+.al-empty {
+  padding: 32px 16px;
+  text-align: center;
+  border: 1px dashed rgba(128, 128, 128, 0.4);
+  border-radius: 12px;
+  opacity: 0.8;
+}
+
+.al-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+  font-size: 0.9rem;
+}

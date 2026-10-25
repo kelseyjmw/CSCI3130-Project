@@ -1,0 +1,89 @@
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  text-align: left;
+}
+
+.page h1 {
+  font-size: 1.75rem;
+  margin: 0 0 20px;
+  text-align: left;
+}
+
+.page-card {
+  background: rgba(128, 128, 128, 0.1);
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.page-details {
+  margin: 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 8px 20px;
+}
+.page-details dt {
+  opacity: 0.65;
+}
+.page-details dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.page-placeholder {
+  margin-top: 16px;
+  font-size: 0.92rem;
+}
+
+.page-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.page-card-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.page-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.page-form label {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+.page-form input,
+.page-form textarea {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+.page-form [role="alert"] {
+  color: #ef4444;
+  font-size: 0.85rem;
+}
+.page-form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.page-banner {
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+.page-banner.success {
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.5);
+}

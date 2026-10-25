@@ -1,0 +1,23 @@
+.navbar {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  flex-wrap: wrap;
+  padding: 12px 20px;
+  background-color: #2a2a2a;
+  gap: 20px;
+}
+.nav-logo {
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+.nav-link:hover {
+  color: var(--accent-bg-full);
+}

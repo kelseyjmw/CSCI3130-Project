@@ -1,0 +1,122 @@
+#my-applications {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  text-align: left;
+}
+
+#my-applications h2 {
+  font-size: 1.35rem;
+  margin: 28px 0 14px;
+  text-align: left;
+}
+#my-applications h2:first-of-type {
+  margin-top: 0;
+}
+
+#my-applications .ma-banner {
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+}
+
+#my-applications .ma-empty {
+  padding: 24px 16px;
+  text-align: center;
+  border: 1px dashed rgba(128, 128, 128, 0.4);
+  border-radius: 12px;
+  opacity: 0.75;
+  margin: 0;
+}
+
+#my-applications .ma-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#my-applications .ma-card {
+  background: rgba(128, 128, 128, 0.1);
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 12px;
+  padding: 14px 18px;
+}
+
+#my-applications .ma-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+#my-applications .ma-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+#my-applications .ma-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid;
+}
+#my-applications .ma-badge.pending {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: rgba(245, 158, 11, 0.55);
+}
+#my-applications .ma-badge.approved {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: rgba(34, 197, 94, 0.55);
+}
+#my-applications .ma-badge.rejected {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.55);
+}
+
+#my-applications .ma-meta {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+#my-applications .ma-reason {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  background: rgba(239, 68, 68, 0.1);
+  border-left: 3px solid #ef4444;
+}
+#my-applications .ma-reason strong {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+  margin-bottom: 2px;
+}
+
+#my-applications .ma-reapply {
+  margin-top: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+#my-applications .ma-reapply.waiting {
+  color: #f59e0b;
+}
+#my-applications .ma-reapply.ready {
+  color: #22c55e;
+}

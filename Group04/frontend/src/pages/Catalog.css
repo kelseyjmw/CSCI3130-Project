@@ -1,0 +1,397 @@
+/* ---------- Page layout ---------- */
+
+.catalog-page {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 28px 24px 60px;
+  text-align: left;
+}
+
+.catalog-page h1 {
+  font-size: 2rem;
+  margin: 20px 0 12px;
+  line-height: 1.2;
+}
+
+.catalog-page h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.catalog-page p + p {
+  margin-top: 8px;
+}
+
+.catalog-page a {
+  color: var(--accent);
+}
+
+.catalog-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.catalog-heading h1,
+.catalog-heading h2 {
+  margin-bottom: 0;
+}
+
+/* ---------- Panels and cards ---------- */
+
+.catalog-panel,
+.catalog-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: var(--bg);
+}
+
+.catalog-grid,
+.catalog-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.catalog-card {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text) !important;
+  padding: 0;
+}
+
+.catalog-card > div {
+  padding: 18px;
+}
+
+.catalog-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  background: var(--code-bg);
+}
+
+.catalog-card > .catalog-card-placeholder { padding: 0; aspect-ratio: 4/3; display: grid; place-items: center; background: var(--code-bg); color: var(--text); }
+.catalog-price {
+  color: var(--text-h);
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+/* ---------- Filters, fields and buttons ---------- */
+
+.catalog-filters,
+.catalog-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.catalog-attribute-filters {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0 16px;
+  min-width: 0;
+}
+
+.catalog-page label,
+.catalog-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.catalog-page input,
+.catalog-page select,
+.catalog-page textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-h);
+  font: inherit;
+}
+
+.catalog-page textarea {
+  resize: vertical;
+}
+
+.catalog-page button,
+.catalog-page .catalog-button {
+  display: inline-block;
+  padding: 9px 14px;
+  border: 1px solid var(--accent-border);
+  border-radius: 6px;
+  color: var(--text-h);
+  background: var(--accent-bg);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.catalog-page button:disabled,
+.catalog-page input:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.catalog-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+/* ---------- Status and messages ---------- */
+
+.catalog-status {
+  padding: 4px 12px;
+  background: var(--code-bg);
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+.catalog-error {
+  color: #bf3545;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.catalog-notice {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin: 16px 0;
+  background: var(--accent-bg);
+}
+
+.catalog-empty {
+  margin: 40px 0;
+  text-align: center;
+}
+
+/* ---------- Listing detail ---------- */
+
+.catalog-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.catalog-gallery figure {
+  margin: 0 0 16px;
+}
+
+.catalog-gallery img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  background: var(--code-bg);
+  border-radius: 10px;
+}
+
+.catalog-gallery figcaption {
+  margin-top: 6px;
+}
+
+.catalog-description {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.catalog-attributes {
+  margin: 0;
+}
+
+.catalog-attributes > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.catalog-attributes dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Listing form and images ---------- */
+
+.catalog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.catalog-form fieldset {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+}
+
+.catalog-form .catalog-details-fields {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.catalog-form-grid {
+  margin: 0;
+}
+
+.catalog-image-editor {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 16px;
+}
+
+.catalog-image-editor img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background: var(--code-bg);
+}
+
+.catalog-image-editor strong {
+  display: block;
+  margin: 8px 0;
+}
+
+.catalog-upload {
+  margin-top: 20px;
+}
+
+/* ---------- Result count and pagination ---------- */
+
+.catalog-count {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.catalog-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* ---------- Filter panel ---------- */
+
+.catalog-filter-panel {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  background: var(--bg);
+}
+
+.catalog-filter-panel label {
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.catalog-filter-panel input,
+.catalog-filter-panel select {
+  box-sizing: border-box;
+  height: 42px;
+  font-size: 1rem;
+}
+
+.catalog-filter-panel .catalog-filters-main {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin: 0;
+}
+
+.catalog-filters-main .catalog-search {
+  grid-column: 1 / -1;
+}
+
+.catalog-filters-main .catalog-field-wide {
+  grid-column: span 2;
+}
+
+.catalog-filter-panel .catalog-attribute-filters {
+  margin-top: 16px;
+}
+
+.catalog-filter-panel .catalog-actions {
+  margin-top: 20px;
+}
+
+.catalog-page .catalog-button-secondary {
+  background: transparent;
+  border-color: var(--border);
+}
+
+/* ---------- Count and sort row ---------- */
+
+.catalog-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.catalog-toolbar .catalog-count {
+  margin: 0;
+}
+
+.catalog-page .catalog-sort {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.catalog-page .catalog-sort select {
+  width: auto;
+  height: 38px;
+}
+
+@media (max-width: 900px) {
+  .catalog-filter-panel .catalog-filters-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .catalog-filters-main .catalog-field-wide {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 650px) {
+  .catalog-page {
+    padding: 20px 14px;
+  }
+
+  .catalog-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-panel {
+    padding: 16px;
+  }
+}
