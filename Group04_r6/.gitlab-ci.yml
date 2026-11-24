@@ -1,0 +1,63 @@
+default:
+  tags:
+    - dalfcs_gitlab_docker_ci
+
+stages:
+  - build
+  - test
+
+frontend-build:
+  stage: build
+  image: node:22
+  cache:
+    key:
+      files:
+        - frontend/package-lock.json
+    paths:
+      - .npm/
+  script:
+    - cd frontend
+    - npm ci --cache ../.npm
+    - npm run build
+  artifacts:
+    paths:
+      - frontend/dist/
+    expire_in: 1 week
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+backend-test:
+  stage: test
+  image: python:3.12
+  variables:
+    SECRET_KEY: "ci-only-not-a-real-secret"
+  cache:
+    key:
+      files:
+        - requirements.txt
+    paths:
+      - .cache/pip
+  script:
+    - pip install --cache-dir .cache/pip -r requirements.txt
+    - python backend/manage.py test tests
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+frontend-test:
+  stage: test
+  image: node:22
+  cache:
+    key:
+      files:
+        - frontend/package-lock.json
+    paths:
+      - .npm/
+  script:
+    - cd frontend
+    - npm ci --cache ../.npm
+    - npm test
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
